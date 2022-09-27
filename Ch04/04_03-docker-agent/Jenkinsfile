@@ -1,7 +1,10 @@
 pipeline {
     agent {
-        docker { image 'public.ecr.aws/docker/library/maven:latest' }
-        label 'docker && linux'
+        docker { 
+            image 'public.ecr.aws/docker/library/maven:latest' 
+            label 'docker && linux'    
+           }
+        
     }
     stages {
         stage('Source') {
